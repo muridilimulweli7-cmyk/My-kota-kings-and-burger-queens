@@ -4,54 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!--Header section-->
     <header>
-        <h1>Welcome to Kota Kings & Burger Queens Contact Us page</h1>
+        <h1>Contact Us</h1>
         <img src="../Assets/about 111.png" width="500" height="500">
            <nav>
-            <a target="_blank" href="../index.html">Home</a>
-            <a target="_blank" href="Menu.html">Menu</a>
-            <a target="_blank" href="Gallery.html">Gallery</a>
-            <a target="_blank" href="About us.html">About us</a>
-            <a target="_blank" href="Contact us.html">Contact us</a>
+            <a href="../index.html">Home</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="About us.html">About us</a>
+            <a href="Contact us.html">Contact us</a>
            </nav>
     </header>
     <!--Main section-->
     <main>
         <section>
-            <h2>Contact Information</h2>
+            <h2>Contact Form</h2>
             <p>If you have any questions, feedback, or inquiries, please reach out to us:</p>
             <ul>
                 <li>Email: <a href="mailto:Muridilimulweli7@gmail.com">Muridilimulweli7@gmail.com</a></li>
                 <li>phone: <a href="tel:+27712551109">+27712551109</a></li>
                 <li><Address>123 Fast Food St, Polokwane, South Africa</Address></li>
             </ul>
+            <form action="#" method="post">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="surname" placeholder="Your Surname" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" name="Id" placeholder="ID Number" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-comment"></i>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </section>
-        <section>
-            <!--Feedback Table-->
-            <h2>Feedback Table</h2>
-           <table>
-               <tr>
-                 <td width="100">Name:</td>
-                 <td><input type="text" name="name" placeholder="Enter your name" required></td>
-               </tr>
-               <tr>
-                 <td width="100">Email:</td>
-                 <td><input type="email" name="email" placeholder="Enter your email" required></td>
-               </tr>
-               <tr>
-                 <td width="100">Message:</td>
-                 <td>
-                    <textarea rows="5" cols="30"></textarea>
-                 </td>
-                </tr>
-               <tr>
-                 <td><input type="submit" value="submit"></td>   
-           </table>
-        </section>
-        <section>
+        <section class="map-section">
             <!--Location-->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29180.69679003327!2d29.451878400000002!3d-23.904256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d969202f0bd5%3A0xd62cf355fe0e3ccd!2sThe%20Greenery!5e0!3m2!1sen!2sza!4v1755596431458!5m2!1sen!2sza" 
             width="600" 
@@ -69,9 +72,9 @@
             <h2>Follow Us on Social Media</h2>
             <p>Stay updated with our latest news and promotions:</p>
             <ul>
-                <li><a href="https://www.facebook.com/KotaKingsBurgerQueens" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/KotaKingsBurgerQueens" target="_blank">Instagram</a></li>
-                <li><a href="https://www.twitter.com/KotaKingsBurgerQueens" target="_blank">Twitter</a></li>
+                <li><a href="https://www.facebook.com/KotaKingsBurgerQueens" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/KotaKingsBurgerQueens" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://www.twitter.com/KotaKingsBurgerQueens" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
             </ul>
         </section>
         <p>
