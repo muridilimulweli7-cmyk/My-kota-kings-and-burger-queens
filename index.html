@@ -10,23 +10,21 @@
 <body>
     <!--Header section-->
     <header>
-        <h1>Welcome to Kota Kings & Burger Queens</h1>
+        <h2>Welcome to Kota Kings & Burger Queens</h2>
         <img src="./Assets/logo.png" alt="image">
-           <nav>
-            <a href="index.html">Home</a>
-            <a href="./Pages/About us.html">About us</a>
-            <a href="./Pages/Menu.html">Menu</a>
-            <a href="./Pages/Gallery.html">Gallery</a>
-            <a href="./Pages/contact us.html">Contact us</a>
-           </nav>
-           <!--Add a humburger navigation for small devices-->
-           <div class="hamburger">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-           </div>
+           <!-- hidden checkbox -->
+  <input type="checkbox" id="menu-toggle">
+  
+  <!-- label acts as hamburger -->
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+  <nav id="site-nav">
+    <a href="index.html">Home</a>
+    <a href="./Pages/About us.html">About us</a>
+    <a href="./Pages/Menu.html">Menu</a>
+    <a href="./Pages/Gallery.html">Gallery</a>
+    <a href="./Pages/contact us.html">Contact us</a>
+  </nav>
     </header>
     <!--Main section-->
     <main>

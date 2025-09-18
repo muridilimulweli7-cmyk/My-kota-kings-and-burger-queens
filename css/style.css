@@ -18,8 +18,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #d2f02c;
+    padding: 10px 20px;
+    background-color: #f6fa04;
 }
 
 header img {
@@ -36,8 +36,51 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #e0dcdc;
+    color: white;
 }
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Default hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 8px;
+  user-select: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Show hamburger, hide nav */
+  .hamburger {
+    display: block;
+  }
+
+  #site-nav {
+    display: none;               /* hidden until checked */
+    flex-direction: column;         /* horizontal links */
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;            /* dropdown background */
+    padding: 10px;
+    left: 160px;
+    top: 140px;
+    border-radius: 20px;
+    width: 50%;
+    box-sizing: border-box;
+    margin-top: 10px;            /* small gap below header */
+    position: absolute;          /* stays in flow under header */
+  }
+
+  /* When checkbox is checked → show menu */
+  #menu-toggle:checked + .hamburger + #site-nav {
+    display: flex;
+  }
+}
+
 
 /* Main section */
 main {
@@ -81,7 +124,7 @@ main h1 {
 
 /* Footer */
 footer {
-    background-color: #dcee3b;
+    background-color: #f6fa04;
     padding: 15px;
     margin-top: 20px;
     color: #000;
@@ -100,7 +143,7 @@ section {
     max-width: 700px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #fff8e1;  /* soft yellow */
+    background-color: #FFFFFF;  /* soft yellow */
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
     font-family: Arial, sans-serif;
@@ -187,8 +230,8 @@ button[type="submit"]:hover {
 /* Map Section */
 .map-section {
     text-align: center;
-    padding: 40px 20px;
-    background: #fff8e1;        /* light cream white background */
+    padding: 10px 10px;
+    background: white;        /* light cream white background */
     border-radius: 12px;
     max-width: 900px;
     margin: 30px auto;
