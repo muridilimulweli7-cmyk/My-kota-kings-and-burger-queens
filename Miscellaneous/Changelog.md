@@ -43,3 +43,5 @@ Initial project setup with folder structure (`Pages`, `Assets`, `css`).
 - Basic structure with headers, footers, and placeholder content.  
 - Linked external Font Awesome CDN.  
 - Linked external CSS file.  
+
+Added the (@Media queries,em and rem) that are included to be fitted on both tablets, phones and Laptops.
