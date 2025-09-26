@@ -45,3 +45,7 @@ Initial project setup with folder structure (`Pages`, `Assets`, `css`).
 - Linked external CSS file.  
 
 Added the (@Media queries,em and rem) that are included to be fitted on both tablets, phones and Laptops.
+## I have Added the pictures in the Assets 
+-Added 3 Pictures of Mobile inspects 
+-Added 3 pictures of Tablets inspects
+-Added 2 pictures of Laptop or desktop inspects
