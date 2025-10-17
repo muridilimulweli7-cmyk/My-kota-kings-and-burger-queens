@@ -44,10 +44,10 @@ header nav a:hover {
   display: none;
 }
 
-/* Default hamburger hidden on desktop */
+/* Hamburger button */
 .hamburger {
   display: none;
-  font-size: 1.75rem; /* 28px */
+  font-size: 1.75rem;
   cursor: pointer;
   padding: 0.5rem;
   user-select: none;
@@ -57,25 +57,32 @@ header nav a:hover {
 @media (max-width: 48em) { /* 768px */
   .hamburger {
     display: block;
+    z-index: 1100;
   }
 
   #site-nav {
     display: none;
-    flex-direction: column;        
-    justify-content: space-around;
-    align-items: center;
-    background: #fff;            
-    padding: 10%;
-    left: 160px;
-    top: 140px;
-    border-radius: 1.25rem;
-    width: 50%;
-    margin-top: 10%;            
-    position: absolute;          
+    flex-direction: column;
+    position: absolute;
+    top: 111px;        /* just below hamburger */
+    right: 3px;      /* aligned to right side */
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    width: 60%;       /* smaller width */
+    max-width: 250px; /* prevent it from being too wide */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   }
 
   #menu-toggle:checked + .hamburger + #site-nav {
     display: flex;
+  }
+
+  #site-nav a {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
   }
 }
 
@@ -105,10 +112,10 @@ main h1 {
 .gallery img,
 .gallery video {
     width: 100%;
-    height: auto;
+    height: 250px; /* fixed height for all items */
     border-radius: 0.75rem;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    object-fit: cover;
+    object-fit: cover; /* Ensures image/video fills area neatly */
     transition: transform 0.3s ease;
 }
 
@@ -361,3 +368,5 @@ button[type="submit"]:hover {
     font-size: 2.5rem;
   }
 }
+
+
