@@ -13,19 +13,19 @@
         <h3>Contact Us</h3>
         <img src="../Assets/about pic.png" height="500" width="500">
         <!-- hidden checkbox -->
-  <input type="checkbox" id="menu-toggle">
-  
-  <!-- label acts as hamburger -->
-  <label for="menu-toggle" class="hamburger">&#9776;</label>
-           <nav id="site-nav">
+        <input type="checkbox" id="menu-toggle">
+        <!-- label acts as hamburger -->
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <nav id="site-nav">
             <a href="../index.html">Home</a>
             <a href="Menu.html">Menu</a>
             <a href="Gallery.html">Gallery</a>
             <a href="About us.html">About us</a>
             <a href="Contact us.html">Contact us</a>
             <a href="Enquiry.html">Enquiry</a>
-           </nav>
+        </nav>
     </header>
+
     <!--Main section-->
     <main>
         <section>
@@ -33,48 +33,53 @@
             <p>If you have any questions, feedback, or inquiries, please reach out to us:</p>
             <ul>
                 <li>Email: <a href="mailto:Muridilimulweli7@gmail.com">Muridilimulweli7@gmail.com</a></li>
-                <li>phone: <a href="tel:+27712551109">+27712551109</a></li>
-                <li><Address>123 Fast Food St, Polokwane, South Africa</Address></li>
+                <li>Phone: <a href="tel:+27712551109">+27712551109</a></li>
+                <li><address>123 Fast Food St, Polokwane, South Africa</address></li>
             </ul>
         </section>
+
+        <!-- Contact Form -->
         <section class="contact-form">
-            <h2>Contact-form</h2>
-            <form action="#" method="post" onsubmit="return validateForm()">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="surname" placeholder="Your Surname" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-id-card"></i>
-                    <input type="text" name="Id" placeholder="ID Number" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-comment"></i>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+    <h2>Contact Form</h2>
+    <form id="contactForm" action="#" method="post">
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name" placeholder="Your Name" >
+            <span class="validation-mark"></span>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="surname" name="surname" placeholder="Your Surname" >
+            <span class="validation-mark"></span>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-id-card"></i>
+            <input type="text" id="idNumber" name="Id" placeholder="ID Number" >
+            <span class="validation-mark"></span>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="Your Email" >
+            <span class="validation-mark"></span>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-comment"></i>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
+            <span class="validation-mark"></span>
+        </div>
+        <button type="submit" onclick="return validateForm()">Submit</button>
+       </form>
+    <p id="successMessage" style="color:rgb(7, 219, 7); text-align:center; margin-top:10px;"></p>
+    </section>
+
+        <!-- Map Section -->
         <section class="map-section">
-            <!--Location-->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29180.69679003327!2d29.451878400000002!3d-23.904256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d969202f0bd5%3A0xd62cf355fe0e3ccd!2sThe%20Greenery!5e0!3m2!1sen!2sza!4v1755596431458!5m2!1sen!2sza" 
-            width="200" 
-            height="300" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+            width="200" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
+
     <!--Footer section-->
     <footer style="text-align: center;">
         <section>
@@ -86,11 +91,46 @@
                 <li><a href="https://www.twitter.com/KotaKingsBurgerQueens" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
             </ul>
         </section>
-        <p>
-            &copy; 2025 Kota Kings & Burger Queens
-        </p>
+        <p>&copy; 2025 Kota Kings & Burger Queens</p>
         <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
     </footer>
-    <script src="form-validation.js"></script>
-  </body>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function validateForm() {
+            const form = document.getElementById("contactForm");
+        const successMessage = document.getElementById("successMessage");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const surname = document.getElementById("surname").value.trim();
+            const idNumber = document.getElementById("idNumber").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !surname || !idNumber || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (isNaN(idNumber)) {
+                alert("ID Number must contain only numbers.");
+                return;
+            }
+
+            successMessage.textContent = "Form submitted successfully! ✅";
+            form.reset();
+        });
+     }
+        
+    </script>
+</body>
 </html>

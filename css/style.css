@@ -443,3 +443,62 @@ button[type="submit"]:hover {
     font-size: 1.7rem;
   }
 }
+
+/* Team Section */
+.team-section {
+  text-align: center;
+  background-color: #fff8f0;
+  padding: 40px 20px;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.team-member {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f57c00;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.team-member img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.team-member h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+@media (min-width: 768px) {
+  #site-nav {
+    display: flex !important; /* always show nav on desktop */
+  }
+  .hamburger {
+    display: none; /* hide hamburger icon on desktop */
+  }
+}
+
+/* Fix hamburger stacking and nav overlay */
+.hamburger {
+    position: relative;   /* allows z-index to work */
+    z-index: 1200;        /* appear above all content */
+}
+
+#site-nav {
+    z-index: 1200;        /* ensures menu dropdown overlays forms and sections */
+}

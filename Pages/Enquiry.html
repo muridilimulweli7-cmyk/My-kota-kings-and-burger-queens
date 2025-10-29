@@ -1,56 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry Form</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!--Header section-->
-    <header>
-        <h3>Enquiry Form</h3>
-        <img src="../Assets/about pic.png" height="500" width="500">
-        <!-- hidden checkbox -->
-  <input type="checkbox" id="menu-toggle">
+  <!-- Header section -->
+  <header>
+    <h3>Enquiry Form</h3>
+    <img src="../Assets/about pic.png" height="500" width="500">
+    
+    <!-- Hidden checkbox for hamburger -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-  <!-- label acts as hamburger -->
-  <label for="menu-toggle" class="hamburger">&#9776;</label>
     <nav id="site-nav">
-       <a href="../index.html">Home</a>
-       <a href="Menu.html">Menu</a>
-       <a href="Gallery.html">Gallery</a>
-       <a href="About us.html">About us</a>
-       <a href="Contact us.html">Contact us</a>
-       <a href="Enquiry.html">Enquiry</a>
+      <a href="../index.html">Home</a>
+      <a href="Menu.html">Menu</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="About us.html">About us</a>
+      <a href="Contact us.html">Contact us</a>
+      <a href="Enquiry.html">Enquiry</a>
     </nav>
-    </header>
-    <!--Main section-->
-    <main>
-       <section class="enquiry-form">
-         <h2>Enquiry Form</h2>
-            <form id="enquiryForm" action="submit_form.php" method="POST">
-             <label for="name">Full Name:</label>
-             <input type="text" id="name" name="name" required>
+  </header>
 
-             <label for="email">Email Address:</label>
-             <input type="email" id="email" name="email" required>
+  <!-- Main section -->
+  <main>
+    <section class="enquiry-form">
+      <h2>Send Us Your Enquiry</h2>
+      <form id="enquiryForm" action="submit_form.php" method="POST" enctype="multipart/form-data">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
 
-             <label for="phone">Phone Number:</label>
-             <input type="tel" id="phone" name="phone" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
 
-             <label for="message">Your Enquiry:</label>
-             <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g. 0821234567">
 
-             <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-    <!--Footer section-->
-    <footer style="text-align: center;">
-       <p>&copy; <span class="year"></span> Kota Kings & Burger Queens</p>
-       <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
-</footer>
+        <label for="enquiryType">Type of Enquiry:</label>
+        <select id="enquiryType" name="enquiryType" required>
+          <option value="">-- Select an Option --</option>
+          <option value="order">Order Related</option>
+          <option value="feedback">Feedback</option>
+          <option value="franchise">Franchise Opportunity</option>
+          <option value="general">General Question</option>
+        </select>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+
+        <label for="attachment">Upload a File (optional):</label>
+        <input type="file" id="attachment" name="attachment" accept=".jpg,.png,.pdf">
+
+        <label>
+          <input type="checkbox" id="agree" name="agree" required>
+          I agree to the <a href="PrivacyPolicy.html" target="_blank">Privacy Policy</a>.
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Success message -->
+      <p id="successMessage" style="color: green; font-weight: bold; display: none; margin-top: 15px;">
+        ✅ Thank you! Your enquiry has been submitted successfully.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer style="text-align: center;">
+    <p>&copy; <span class="year"></span> Kota Kings & Burger Queens</p>
+    <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
+  </footer>
+
+  <!-- Internal JavaScript -->
+  <script>
+    // -----------------------------
+    // 1. Update footer year
+    // -----------------------------
+    document.querySelector('.year').textContent = new Date().getFullYear();
+
+    // -----------------------------
+    // 2. Hamburger menu persistence
+    // -----------------------------
+    const menuToggle = document.getElementById('menu-toggle');
+
+    // Load saved state
+    window.addEventListener('load', () => {
+      const savedState = localStorage.getItem('menuOpen');
+      if (savedState === 'true') {
+        menuToggle.checked = true;
+      }
+    });
+
+    // Save state when toggled
+    menuToggle.addEventListener('change', () => {
+      localStorage.setItem('menuOpen', menuToggle.checked);
+    });
+
+    // -----------------------------
+    // 3. Enquiry form validation
+    // -----------------------------
+    const form = document.getElementById('enquiryForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent actual submission for demo
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const enquiryType = document.getElementById('enquiryType').value;
+      const message = document.getElementById('message').value.trim();
+      const agree = document.getElementById('agree').checked;
+      const attachment = document.getElementById('attachment').files[0];
+
+      // Basic validation
+      if (!name || !email || !phone || !enquiryType || !message) {
+        alert(' Please fill in all required fields.');
+        return;
+      }
+
+      // Phone number validation
+      const phonePattern = /^[0-9]{10}$/;
+      if (!phone.match(phonePattern)) {
+        alert(' Please enter a valid 10-digit phone number.');
+        return;
+      }
+
+      // Privacy policy check
+      if (!agree) {
+        alert(' You must agree to the Privacy Policy.');
+        return;
+      }
+
+      // Optional file type check
+      if (attachment) {
+        const allowedTypes = ['image/jpeg', 'image/png', 'application/pdf'];
+        if (!allowedTypes.includes(attachment.type)) {
+          alert(' Only JPG, PNG, or PDF files are allowed.');
+          return;
+        }
+      }
+
+      // Show success message and reset form
+      successMessage.style.display = 'block';
+      form.reset();
+
+      // Optional: hide message after 5 seconds
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
 </body>
 </html>
+

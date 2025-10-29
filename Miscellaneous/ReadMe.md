@@ -110,6 +110,71 @@ This project is open-source and free to use for personal and commercial projects
 ## Author
 Mulweli Muridili
 
+Features
+
+Responsive Header
+
+Logo and navigation links
+
+Hamburger menu for mobile devices
+
+Navigation overlay appears above all content
+
+Gallery & Media Sections
+
+Grid-based gallery layout
+
+Images and videos with hover zoom effect
+
+Team Section
+
+Circular team member photos
+
+Hover effects for better interaction
+
+Contact Form
+
+Name, Surname, ID, Email, and Message fields
+
+Live validation with green checkmarks and red crosses
+
+Responsive for all screen sizes
+
+Map Section
+
+Embedded Google Map
+
+Centered layout with shadow effect
+
+Footer
+
+Simple footer with company info
+
+Technologies Used
+
+HTML5
+
+CSS3 (Flexbox, Grid, Media Queries)
+
+JavaScript (for live form validation)
+
+Font Awesome (for icons)
+
+Installation / Usage
+
+Clone or download the repository
+
+Open index.html in a web browser
+
+For live form validation, ensure JavaScript is enabled in the browser
+
+File Structure
+/project-folder
+│-- index.html
+│-- style.css
+│-- script.js
+│-- /images
+│-- /videos
 References
 
 For royalty-free food photography (2025).

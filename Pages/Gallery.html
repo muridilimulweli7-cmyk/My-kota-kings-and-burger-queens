@@ -1,53 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!--Header section-->
-    <header>
-        <h2>Gallery</h2>
-        <img src="../Assets/about pic.png" height="500" width="500">
-        <!-- hidden checkbox -->
-  <input type="checkbox" id="menu-toggle">
-  
-  <!-- label acts as hamburger -->
-  <label for="menu-toggle" class="hamburger">&#9776;</label>
-        <nav id="site-nav">
-            <a href="../index.html">Home</a>
-            <a href="Menu.html">Menu</a>
-            <a href="Gallery.html">Gallery</a>
-            <a href="About us.html">About us</a>
-            <a href="Contact us.html">Contact us</a>
-            <a href="Enquiry.html">Enquiry</a>
-           </nav>
-    </header>
-    <!--Main section-->
-    <main>
-      <section class="gallery">
-        <img src="../Assets/OIP (1).webp" alt="kota image" width="400" height="400">
-        <img src="../Assets/oip 2.webp" alt="burger image" width="400" height="400">
-        <img src="../Assets/OIP 3.jpeg" alt="Kota & burger" width="400" height="400">
-        <img src="../Assets/OIP 4.jpeg" alt="combined menus" width="400" height="400">
-        <img src="../Assets/coke pic.webp" alt="coke image" width="400" height="400">
-        <img src="../Assets/drinksss.jpeg" alt="drink image" width="400" height="400">
-        <img src="../Assets/fries.webp" alt="fries image" width="400" height="400">
-        <img src="../Assets/backgroup option 2.webp" alt="background" width="400" height="400">
-        <!--Embedding videos-->
-        <video src="../Assets/Kota video.mp4" alt="video" width="400" height="400" controls></video>
-        <video src="../Assets/Burger video.mp4" alt="video" width="400" height="400" controls></video>
-        <video src="../Assets/video1.mp4" alt="video" width="400" height="400" controls></video>
-        <video src="../Assets/video 2.mp4" alt="video" width="400" height="400" controls></video>
-    </main>
-</section>
-    <!--Footer section-->
-    <footer style="text-align: center;">
-        <p>&copy; 2024 Kota Kings & Burger Queens. All rights reserved.</p>
-        <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
-    </footer>
- </body>
+  <!--Header section-->
+  <header>
+    <h2>Gallery</h2>
+    <img src="../Assets/about pic.png" height="500" width="500">
+    <!-- hidden checkbox -->
+    <input type="checkbox" id="menu-toggle">
+    <!-- label acts as hamburger -->
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <nav id="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="Menu.html">Menu</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="About us.html">About us</a>
+      <a href="Contact us.html">Contact us</a>
+      <a href="Enquiry.html">Enquiry</a>
+    </nav>
+  </header>
+
+  <!--Main section-->
+  <main>
+    <section class="gallery">
+      <img src="../Assets/OIP (1).webp" alt="kota image" width="400" height="400">
+      <img src="../Assets/oip 2.webp" alt="burger image" width="400" height="400">
+      <img src="../Assets/OIP 3.jpeg" alt="Kota & burger" width="400" height="400">
+      <img src="../Assets/OIP 4.jpeg" alt="combined menus" width="400" height="400">
+      <img src="../Assets/coke pic.webp" alt="coke image" width="400" height="400">
+      <img src="../Assets/drinksss.jpeg" alt="drink image" width="400" height="400">
+      <img src="../Assets/fries.webp" alt="fries image" width="400" height="400">
+      <img src="../Assets/backgroup option 2.webp" alt="background" width="400" height="400">
+      <!--Embedding videos-->
+      <video src="../Assets/Kota video.mp4" width="400" height="400" controls></video>
+      <video src="../Assets/Burger video.mp4" width="400" height="400" controls></video>
+      <video src="../Assets/video1.mp4" width="400" height="400" controls></video>
+      <video src="../Assets/video 2.mp4" width="400" height="400" controls></video>
+    </section>
+  </main>
+
+  <!--Footer section-->
+  <footer>
+    <p>&copy; 2025 Kota Kings & Burger Queens. All rights reserved.</p>
+    <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
+  </footer>
+
+  <!-- Internal JavaScript -->
+  <script>
+    // Select all gallery images
+    const images = document.querySelectorAll('.gallery img');
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        // Create a fullscreen view
+        const fullImg = document.createElement('img');
+        fullImg.src = image.src;
+        fullImg.style.position = 'fixed';
+        fullImg.style.top = 0;
+        fullImg.style.left = 0;
+        fullImg.style.width = '100vw';
+        fullImg.style.height = '100vh';
+        fullImg.style.objectFit = 'contain';
+        fullImg.style.backgroundColor = 'rgba(0,0,0,0.9)';
+        fullImg.style.cursor = 'pointer';
+        fullImg.style.zIndex = '1000';
+
+        document.body.appendChild(fullImg);
+
+        // Request fullscreen
+        if (fullImg.requestFullscreen) {
+          fullImg.requestFullscreen();
+        } else if (fullImg.webkitRequestFullscreen) {
+          fullImg.webkitRequestFullscreen(); // Safari
+        } else if (fullImg.msRequestFullscreen) {
+          fullImg.msRequestFullscreen(); // IE/Edge
+        }
+
+        // Click again or press ESC to close
+        const exitFullscreen = () => {
+          if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+            if (document.exitFullscreen) {
+              document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) {
+              document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+              document.msExitFullscreen();
+            }
+          }
+          fullImg.remove();
+        };
+
+        fullImg.addEventListener('click', exitFullscreen);
+        document.addEventListener('fullscreenchange', () => {
+          if (!document.fullscreenElement) fullImg.remove();
+        });
+      });
+    });
+  </script>
+</body>
 </html>
+

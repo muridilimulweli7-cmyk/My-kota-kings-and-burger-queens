@@ -60,3 +60,23 @@ All notable changes to this project will be documented in this file.
 - Responsive and modern design using CSS.
 - Input focus effect for better user experience.
 - Button hover effect for interactivity.
+
+## last updated 2025-10-29
+Initial release:
+• Header with responsive hamburger menu
+• Gallery and media sections
+• Team section
+• Contact form with live validation and checkmarks
+• Map section
+• Footer
+• Responsive design for mobile, tablet, and desktop	Mulweli Muridili
+
+Future Updates:
+
+Add form submission functionality with backend integration
+
+Enhance animations for gallery and team sections
+
+Add accessibility features (ARIA, keyboard navigation)
+
+Improve SEO and meta tags
