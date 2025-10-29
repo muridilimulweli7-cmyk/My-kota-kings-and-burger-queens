@@ -74,6 +74,42 @@ Author
 - **Role:** Website Developer (Student)  
 - **Year:** 2025 
 
+# Enquiry Form Project
+
+A modern and responsive enquiry form built with HTML and CSS. Ideal for websites that need to collect user information or feedback.
+
+## Features
+- Fully responsive design suitable for mobile and desktop.
+- Input fields with placeholders and validation:
+  - Full Name
+  - Email Address
+  - Phone Number
+  - Message
+- Submit button with hover effect.
+- Clean and modern styling with focus effects.
+- Optional background image support.
+
+## Installation
+1. Clone or download the repository.
+2. Open `index.html` in your browser to view the form.
+3. Add your server-side script to `submit_form.` to handle form submissions.
+
+## Usage
+- Users can fill in their details and submit enquiries.
+- Customize the form styling in `style.css` to match your website branding.
+- Optionally, add a background image by editing the `body` CSS.
+
+## Contributing
+- Fork the repository.
+- Make your changes in a new branch.
+- Submit a pull request with a clear description of your updates.
+
+## License
+This project is open-source and free to use for personal and commercial projects.
+
+## Author
+Mulweli Muridili
+
 References
 
 For royalty-free food photography (2025).

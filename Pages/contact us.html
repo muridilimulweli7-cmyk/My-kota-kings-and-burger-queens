@@ -11,7 +11,7 @@
     <!--Header section-->
     <header>
         <h3>Contact Us</h3>
-        <img src="../Assets/about 111.png" width="400" height="400">
+        <img src="../Assets/about pic.png" height="500" width="500">
         <!-- hidden checkbox -->
   <input type="checkbox" id="menu-toggle">
   
@@ -23,6 +23,7 @@
             <a href="Gallery.html">Gallery</a>
             <a href="About us.html">About us</a>
             <a href="Contact us.html">Contact us</a>
+            <a href="Enquiry.html">Enquiry</a>
            </nav>
     </header>
     <!--Main section-->
@@ -38,7 +39,7 @@
         </section>
         <section class="contact-form">
             <h2>Contact-form</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="return validateForm()">
                 <div class="input-group">
                     <i class="fas fa-user"></i>
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -90,5 +91,6 @@
         </p>
         <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
     </footer>
+    <script src="form-validation.js"></script>
   </body>
 </html>

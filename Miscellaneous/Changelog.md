@@ -49,3 +49,14 @@ Added the (@Media queries,em and rem) that are included to be fitted on both tab
 -Added 3 Pictures of Mobile inspects 
 -Added 3 pictures of Tablets inspects
 -Added 2 pictures of Laptop or desktop inspects
+
+All notable changes to this project will be documented in this file.
+
+## last updated - 2025-10-29
+### Added
+- Initial creation of the Enquiry Form.
+- HTML form fields: Full Name, Email Address, Phone Number, Message.
+- Submit button to send the enquiry.
+- Responsive and modern design using CSS.
+- Input focus effect for better user experience.
+- Button hover effect for interactivity.
