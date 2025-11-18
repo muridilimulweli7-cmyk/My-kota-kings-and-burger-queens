@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Meta Tags for SEO-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about Kota Kings & Burger Queens — a proudly South African fast-food brand offering township-style kotas and flame-grilled burgers. Discover our history, mission, team, and vision for growth.">
-    <meta name="keywords" content="Kota Kings, Burger Queens, About Us, South African fast food, township kotas, flame-grilled burgers, Polokwane food, local fast food brand, kota restaurant, burger restaurant">
+    <meta name="description" content="Explore the delicious menu at Kota Kings & Burger Queens — featuring signature kotas, flame-grilled burgers, sides, and drinks.">
+    <meta name="keywords" content="Kota Kings, Burger Queens, Menu, South African fast food, township kotas, flame-grilled burgers, Polokwane food, local fast food">
     <meta name="author" content="Kota Kings & Burger Queens">
-    <title>Menu</title>
+    <title>Menu | Kota Kings & Burger Queens</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!--Header section-->
     <header>
-        <h1>Menu</h1>
-        <img src="../Assets/about pic.png" height="500" width="500">
-    <!-- hidden checkbox -->
-  <input type="checkbox" id="menu-toggle">
-  
-  <!-- label acts as hamburger -->
-  <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <h1>Our Menu</h1>
+        <img src="../Assets/logo.png" alt="Kota Kings & Burger Queens" height="500" width="500">
+        
+        <!-- hidden checkbox -->
+        <input type="checkbox" id="menu-toggle">
+        
+        <!-- label acts as hamburger -->
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        
         <nav id="site-nav">
             <a href="../index.html">Home</a>
             <a href="Menu.html">Menu</a>
@@ -30,45 +31,228 @@
             <a href="Enquiry.html">Enquiry</a>
         </nav>
     </header>
+    
     <!--Main section-->
-    <h2 style="text-align: center;">Menu</h2>
-    <!--Signature Kotas-->
-    <h3 style="text-align: center;"><hr>Kotas</h3>
-    <ul style="text-align: center;">
-        <li><b>Classic Kota – A fresh quarter loaf filled with chips, Russian sausage, cheese, and atchar.</b></li>
-        <li><b>Full House Kota – Chips, Russian, polony, cheese, egg, beef patty, and our secret sauce.</b></li>
-        <li><b>Chicken Deluxe Kota – Crispy chicken strips with chips, cheese, lettuce, tomato, and mayo.</b></li>
-        <li><b>Spicy Kota King – Chips, Vienna, mince, jalapeños, cheese, and chili sauce for that fiery kick.</b></li>
-    </ul>
-    <!--Signature Burgers-->
-    <h3 style="text-align: center;"><hr> Burgers</h3>
-    <ul style="text-align: center;">
-        <li><b>Beef Supreme Burger – Juicy beef patty, lettuce, tomato, cheese, caramelized onions, and BBQ sauce.</b></li>
-        <li><b>Chicken Queen Burger – Grilled or crispy chicken fillet, mayo, lettuce, tomato, and cheese.</b></li>
-        <li><b>Double Trouble Burger – Double beef patties, double cheese, lettuce, tomato, and our signature sauce.</b></li>
-        <li><b>Veggie Delight Burger – Grilled veggie patty with cheese, fresh salad, and tangy mayo.</b></li>
-    </ul>
-    <!--Sides & Extras-->
-    <h3 style="text-align: center;"><hr>Sides & Extras</h3>
-    <ul style="text-align: center;">
-        <li><b>Regular Chips 🍟</b></li>
-        <li><b>Loaded Cheese & Chilli Chips 🌶️🧀</b></li>
-        <li><b>Russian, Vienna, or Polony add-ons</b></li>
-        <li><b>Fresh salads 🥗</b></li>
-    </ul>
-    <h3 style="text-align: center;"><hr>Drinks</h3>
-    <ul style="text-align: center;">
-        <li><b>Soft Drinks (Coke, Fanta, Sprite)</b></li>
-        <li><b>Fresh Juices</b></li>
-        <li><b>Milkshakes (Chocolate, Strawberry, Vanilla)</b></li>
-    </ul>
-    <section class="menu-image" style="text-align: center;">
-    <img src="../Assets/menu.png" width="250" height="500">
-    </section>
+    <main>
+        <div class="menu-intro">
+            <h2>Explore Our Delicious Offerings</h2>
+            <p>From our signature kotas to flame-grilled burgers, we bring you the authentic taste of South African street food with a gourmet twist. All our ingredients are locally sourced and freshly prepared daily.</p>
+        </div>
+        
+        <!-- Special Offers Banner -->
+        <div class="special-offers">
+            <h3>Special Offer!</h3>
+            <p>Get 15% off your first online order with code:</p>
+            <div class="offer-code">KOTA15</div>
+        </div>
+        
+        <!-- Accordion Menu -->
+        <div class="accordion">
+            <!-- Signature Kotas -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3><i class="fas fa-bread-slice"></i> Signature Kotas</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Classic Kota</div>
+                                <div class="menu-item-desc">A fresh quarter loaf filled with chips, Russian sausage, cheese, and atchar.</div>
+                            </div>
+                            <span class="menu-price">R45</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Full House Kota</div>
+                                <div class="menu-item-desc">Chips, Russian, polony, cheese, egg, beef patty, and our secret sauce.</div>
+                            </div>
+                            <span class="menu-price">R65</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Chicken Deluxe Kota</div>
+                                <div class="menu-item-desc">Crispy chicken strips with chips, cheese, lettuce, tomato, and mayo.</div>
+                            </div>
+                            <span class="menu-price">R55</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Spicy Kota King</div>
+                                <div class="menu-item-desc">Chips, Vienna, mince, jalapeños, cheese, and chili sauce for that fiery kick.</div>
+                            </div>
+                            <span class="menu-price">R60</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Signature Burgers -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3><i class="fas fa-hamburger"></i> Signature Burgers</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Beef Supreme Burger</div>
+                                <div class="menu-item-desc">Juicy beef patty, lettuce, tomato, cheese, caramelized onions, and BBQ sauce.</div>
+                            </div>
+                            <span class="menu-price">R50</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Chicken Queen Burger</div>
+                                <div class="menu-item-desc">Grilled or crispy chicken fillet, mayo, lettuce, tomato, and cheese.</div>
+                            </div>
+                            <span class="menu-price">R55</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Double Trouble Burger</div>
+                                <div class="menu-item-desc">Double beef patties, double cheese, lettuce, tomato, and our signature sauce.</div>
+                            </div>
+                            <span class="menu-price">R75</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Veggie Delight Burger</div>
+                                <div class="menu-item-desc">Grilled veggie patty with cheese, fresh salad, and tangy mayo.</div>
+                            </div>
+                            <span class="menu-price">R45</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Sides & Extras -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3><i class="fas fa-utensils"></i> Sides & Extras</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Regular Chips</div>
+                                <div class="menu-item-desc">Golden crispy fries, perfectly seasoned.</div>
+                            </div>
+                            <span class="menu-price">R20</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Loaded Cheese & Chilli Chips</div>
+                                <div class="menu-item-desc">Our famous chips topped with melted cheese and spicy chili.</div>
+                            </div>
+                            <span class="menu-price">R35</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Russian, Vienna, or Polony add-ons</div>
+                                <div class="menu-item-desc">Add your favorite protein to any meal.</div>
+                            </div>
+                            <span class="menu-price">R10</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Fresh Salads</div>
+                                <div class="menu-item-desc">Crisp garden salad with your choice of dressing.</div>
+                            </div>
+                            <span class="menu-price">R25</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Drinks -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h3><i class="fas fa-glass-cheers"></i> Drinks</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Soft Drinks</div>
+                                <div class="menu-item-desc">Coke, Fanta, Sprite - 330ml cans.</div>
+                            </div>
+                            <span class="menu-price">R15</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Fresh Juices</div>
+                                <div class="menu-item-desc">Orange, Apple, or Tropical blend - freshly squeezed.</div>
+                            </div>
+                            <span class="menu-price">R20</span>
+                        </li>
+                        <li>
+                            <div class="menu-item-info">
+                                <div class="menu-item-title">Milkshakes</div>
+                                <div class="menu-item-desc">Creamy shakes in Chocolate, Strawberry, or Vanilla.</div>
+                            </div>
+                            <span class="menu-price">R25</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="menu-image-section">
+            <h3>Our Signature Dishes</h3>
+            <div class="menu-image">
+                <img src="../Assets/signature dishs.webp" alt="Delicious food from Kota Kings & Burger Queens" width="250" height="500">
+            </div>
+        </div>
+    </main>
+    
     <!--Footer section-->
-    <footer style="text-align: center;">
+    <footer>
         <p>&copy; 2024 Kota Kings & Burger Queens. All rights reserved.</p>
-        <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
+        <p><em>"Big Flavour, Big Portions, Proudly Local!"</em></p>
     </footer>
-  </body>
+    
+    <script>
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.accordion-icon');
+                    
+                    // Close all other accordion items
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            const otherContent = otherHeader.nextElementSibling;
+                            const otherIcon = otherHeader.querySelector('.accordion-icon');
+                            otherContent.classList.remove('active');
+                            otherIcon.textContent = '+';
+                        }
+                    });
+                    
+                    // Toggle current accordion item
+                    content.classList.toggle('active');
+                    
+                    // Toggle icon
+                    if (content.classList.contains('active')) {
+                        icon.textContent = '-';
+                    } else {
+                        icon.textContent = '+';
+                    }
+                });
+            });
+            
+            // Optional: Open first accordion by default
+            if (accordionHeaders.length > 0) {
+                accordionHeaders[0].click();
+            }
+        });
+    </script>
+</body>
 </html>
