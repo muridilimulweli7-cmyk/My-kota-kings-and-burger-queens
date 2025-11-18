@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!--Meta Tags for SEO-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn more about Kota Kings & Burger Queens — a proudly South African fast-food brand offering township-style kotas and flame-grilled burgers. Discover our history, mission, team, and vision for growth.">
+  <meta name="keywords" content="Kota Kings, Burger Queens, About Us, South African fast food, township kotas, flame-grilled burgers, Polokwane food, local fast food brand, kota restaurant, burger restaurant">
+  <meta name="author" content="Kota Kings & Burger Queens">
   <title>Enquiry Form</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -33,16 +37,16 @@
       <h2>Send Us Your Enquiry</h2>
       <form id="enquiryForm" action="submit_form.php" method="POST" enctype="multipart/form-data">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Your full name">
+        <input type="text" id="name" name="name"  placeholder="Your full name">
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required placeholder="you@example.com">
+        <input type="email" id="email" name="email" placeholder="you@example.com">
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g. 0821234567">
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 0821234567">
 
         <label for="enquiryType">Type of Enquiry:</label>
-        <select id="enquiryType" name="enquiryType" required>
+        <select id="enquiryType" name="enquiryType">
           <option value="">-- Select an Option --</option>
           <option value="order">Order Related</option>
           <option value="feedback">Feedback</option>
@@ -51,13 +55,13 @@
         </select>
 
         <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+        <textarea id="message" name="message" rows="4" placeholder="Type your message here..."></textarea>
 
         <label for="attachment">Upload a File (optional):</label>
         <input type="file" id="attachment" name="attachment" accept=".jpg,.png,.pdf">
 
         <label>
-          <input type="checkbox" id="agree" name="agree" required>
+          <input type="checkbox" id="agree" name="agree">
           I agree to the <a href="PrivacyPolicy.html" target="_blank">Privacy Policy</a>.
         </label>
 
@@ -70,13 +74,19 @@
       </p>
     </section>
   </main>
+  <!-- RIGHT: INFO -->
+            <div class="contact-info" style="text-align: center;">
+                <div class="card time-card">
+                    <h3>Current Date & Time</h3>
+                    <p id="currentDateTime"></p>
+            </div>
 
   <!-- Footer section -->
   <footer style="text-align: center;">
     <p>&copy; <span class="year"></span> Kota Kings & Burger Queens</p>
     <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
   </footer>
-
+  
   <!-- Internal JavaScript -->
   <script>
     // -----------------------------
@@ -156,6 +166,15 @@
         successMessage.style.display = 'none';
       }, 5000);
     });
+
+    // Display live date and time
+        const dateElement = document.getElementById("currentDateTime");
+        function updateDateTime() {
+            const now = new Date();
+            dateElement.textContent = now.toLocaleString();
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
   </script>
 </body>
 </html>

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Meta Tags for SEO-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Kota Kings & Burger Queens — a proudly South African fast-food brand offering township-style kotas and flame-grilled burgers. Discover our history, mission, team, and vision for growth.">
+    <meta name="keywords" content="Kota Kings, Burger Queens, About Us, South African fast food, township kotas, flame-grilled burgers, Polokwane food, local fast food brand, kota restaurant, burger restaurant">
+    <meta name="author" content="Kota Kings & Burger Queens">
     <title>Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -79,6 +83,12 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
+    <!-- RIGHT: INFO -->
+    <div class="contact-info" style="text-align: center;">
+      <div class="card time-card">
+      <h3>Current Date & Time</h3>
+      <p id="currentDateTime"></p>
+    </div>
 
     <!--Footer section-->
     <footer style="text-align: center;">
@@ -98,7 +108,7 @@
     <!-- Internal JavaScript -->
     <script>
         function validateForm() {
-            const form = document.getElementById("contactForm");
+        const form = document.getElementById("contactForm");
         const successMessage = document.getElementById("successMessage");
 
         form.addEventListener("submit", function(event) {
@@ -130,7 +140,14 @@
             form.reset();
         });
      }
-        
+        // Display live date and time
+        const dateElement = document.getElementById("currentDateTime");
+        function updateDateTime() {
+            const now = new Date();
+            dateElement.textContent = now.toLocaleString();
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
     </script>
 </body>
 </html>

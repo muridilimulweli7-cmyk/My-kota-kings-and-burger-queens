@@ -80,3 +80,5 @@ Enhance animations for gallery and team sections
 Add accessibility features (ARIA, keyboard navigation)
 
 Improve SEO and meta tags
+
+I have added the Meta Tags SEO on my html pages 
