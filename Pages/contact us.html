@@ -4,10 +4,10 @@
     <!--Meta Tags for SEO-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about Kota Kings & Burger Queens — a proudly South African fast-food brand offering township-style kotas and flame-grilled burgers. Discover our history, mission, team, and vision for growth.">
-    <meta name="keywords" content="Kota Kings, Burger Queens, About Us, South African fast food, township kotas, flame-grilled burgers, Polokwane food, local fast food brand, kota restaurant, burger restaurant">
+    <meta name="description" content="Contact Kota Kings & Burger Queens — a proudly South African fast-food brand. Reach out with questions, feedback, or inquiries.">
+    <meta name="keywords" content="Kota Kings, Burger Queens, Contact Us, South African fast food, Polokwane restaurant, kota contact, burger contact">
     <meta name="author" content="Kota Kings & Burger Queens">
-    <title>Contact Us</title>
+    <title>Contact Us - Kota Kings & Burger Queens</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -15,7 +15,7 @@
     <!--Header section-->
     <header>
         <h3>Contact Us</h3>
-        <img src="../Assets/about pic.png" height="500" width="500">
+        <img src="../Assets/about pic.png" height="500" width="500" alt="Kota Kings & Burger Queens">
         <!-- hidden checkbox -->
         <input type="checkbox" id="menu-toggle">
         <!-- label acts as hamburger -->
@@ -44,48 +44,44 @@
 
         <!-- Contact Form -->
         <section class="contact-form">
-    <h2>Contact Form</h2>
-    <form id="contactForm" action="#" method="post">
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" id="name" name="name" placeholder="Your Name" >
-            <span class="validation-mark"></span>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" id="surname" name="surname" placeholder="Your Surname" >
-            <span class="validation-mark"></span>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-id-card"></i>
-            <input type="text" id="idNumber" name="Id" placeholder="ID Number" >
-            <span class="validation-mark"></span>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email" id="email" name="email" placeholder="Your Email" >
-            <span class="validation-mark"></span>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-comment"></i>
-            <textarea id="message" name="message" placeholder="Your Message" rows="5"></textarea>
-            <span class="validation-mark"></span>
-        </div>
-        <button type="submit" onclick="return validateForm()">Submit</button>
-       </form>
-    <p id="successMessage" style="color:rgb(7, 219, 7); text-align:center; margin-top:10px;"></p>
-    </section>
+            <h2>Contact Form</h2>
+            <form id="contactForm" action="mailto:Muridilimulweli7@gmail.com" method="get" enctype="text/plain">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="surname" name="surname" placeholder="Your Surname">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="idNumber" name="idNumber" placeholder="ID Number">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-comment"></i>
+                    <textarea id="message" name="body" placeholder="Your Message" rows="5"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="successMessage" style="color:rgb(7, 219, 7); text-align:center; margin-top:10px; display:none;"></p>
+        </section>
 
         <!-- Map Section -->
         <section class="map-section">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29180.69679003327!2d29.451878400000002!3d-23.904256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d969202f0bd5%3A0xd62cf355fe0e3ccd!2sThe%20Greenery!5e0!3m2!1sen!2sza!4v1755596431458!5m2!1sen!2sza" 
-            width="200" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
+    
     <!-- RIGHT: INFO -->
     <div class="contact-info" style="text-align: center;">
-      <div class="card time-card">
+      <div class="time-card">
       <h3>Current Date & Time</h3>
       <p id="currentDateTime"></p>
     </div>
@@ -102,52 +98,68 @@
             </ul>
         </section>
         <p>&copy; 2025 Kota Kings & Burger Queens</p>
-        <p><em>“Big Flavour, Big Portions, Proudly Local!”</em></p>
+        <p><em>"Big Flavour, Big Portions, Proudly Local!"</em></p>
     </footer>
 
     <!-- Internal JavaScript -->
     <script>
-        function validateForm() {
-        const form = document.getElementById("contactForm");
-        const successMessage = document.getElementById("successMessage");
-
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const name = document.getElementById("name").value.trim();
-            const surname = document.getElementById("surname").value.trim();
-            const idNumber = document.getElementById("idNumber").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            if (!name || !surname || !idNumber || !email || !message) {
-                alert("Please fill in all fields.");
-                return;
+        // Form validation and submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Form submission
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const name = document.getElementById('name').value.trim();
+                const surname = document.getElementById('surname').value.trim();
+                const idNumber = document.getElementById('idNumber').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                // Validation
+                if (!name || !surname || !idNumber || !email || !message) {
+                    alert('Please fill in all fields.');
+                    return;
+                }
+                
+                const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (!email.match(emailPattern)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                if (isNaN(idNumber) || idNumber.length !== 13) {
+                    alert('ID Number must contain exactly 13 numbers.');
+                    return;
+                }
+                
+                // Submit the form to open email client
+                form.submit();
+                
+                // Show success message
+                successMessage.textContent = 'Form submitted successfully! ✅ We will contact you soon.';
+                successMessage.style.display = 'block';
+                
+                // Reset form
+                form.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            });
+            
+            // Display live date and time
+            const dateElement = document.getElementById('currentDateTime');
+            function updateDateTime() {
+                const now = new Date();
+                dateElement.textContent = now.toLocaleString();
             }
-
-            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-            if (!email.match(emailPattern)) {
-                alert("Please enter a valid email address.");
-                return;
-            }
-
-            if (isNaN(idNumber)) {
-                alert("ID Number must contain only numbers.");
-                return;
-            }
-
-            successMessage.textContent = "Form submitted successfully! ✅";
-            form.reset();
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
         });
-     }
-        // Display live date and time
-        const dateElement = document.getElementById("currentDateTime");
-        function updateDateTime() {
-            const now = new Date();
-            dateElement.textContent = now.toLocaleString();
-        }
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
     </script>
 </body>
 </html>

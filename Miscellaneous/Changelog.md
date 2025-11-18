@@ -23,6 +23,7 @@ Initial project setup with folder structure (`Pages`, `Assets`, `css`).
   - Contact form with validation fields.  
   - Embedded Google Maps location.  
   - Social media links with Font Awesome icons. 
+  - IF You missed a space when submitting a form you need to restart the page then fill all the required space then submit
 
   **CSS Styling (style.css)**:  
   - Responsive design with a hamburger menu.  
@@ -82,3 +83,10 @@ Add accessibility features (ARIA, keyboard navigation)
 Improve SEO and meta tags
 
 I have added the Meta Tags SEO on my html pages 
+
+## When it comes to the Galary you must click on the picture to enlarge it to see clearly
+## I have added the Accordions on the Menu page 
+
+## Contact Form
+-IF You missed a space when submitting a form you need to restart the page then fill all the required space then submit
+- After submitting wait for 5 seconds the it will direct you to the email
