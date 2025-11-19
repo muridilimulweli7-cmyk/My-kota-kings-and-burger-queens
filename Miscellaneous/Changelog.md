@@ -90,3 +90,8 @@ I have added the Meta Tags SEO on my html pages
 ## Contact Form
 -IF You missed a space when submitting a form you need to restart the page then fill all the required space then submit
 - After submitting wait for 5 seconds the it will direct you to the email
+
+## Navigations
+- I have reduced the the gaps between the hamburger links 
+
+And on the home page i decided to shift the Welcoming message from the hearder and moved it under the hearder
